@@ -103,6 +103,9 @@ class QlearningAgent(Agent):
         self.state_value[s] = self.action_value[s].max()
         return
 
+    def take_action_greedy(self, state):
+        # off policy
+        return self.action_space.sample()
 
 def test_agent(agent):
 
